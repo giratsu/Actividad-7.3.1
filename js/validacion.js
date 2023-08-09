@@ -14,8 +14,7 @@ document.addEventListener("DOMContentLoaded", function(){
     form.onsubmit = function(event) {
         event.preventDefault();
         const pass1 = document.getElementById("password1").value;
-    document.getElementById("password1").style.color = "red";
-    const pass2 = document.getElementById("password2").value;
+        const pass2 = document.getElementById("password2").value;
 
         if(pass1 !== pass2)
         {
