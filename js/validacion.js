@@ -1,28 +1,29 @@
 document.addEventListener("DOMContentLoaded", function(){
 
     function showAlertSuccess() {
-        document.getElementById("alert-success").classList.add("show");
+        let sucessAlert = document.getElementById("alert-success").classList.add("show");
+        foreach()
     }
     
     function showAlertError() {
-        document.getElementById("alert-danger").classList.add("show");
+        let Alert = document.getElementById("alert-danger").classList.add("show");
     }
     
     let form = document.getElementById("formulario");
-    
-    let pass1 = document.getElementById("password1").value;
-    let pass2 = document.getElementById("password2").value;
 
-    form.addEventListener('submit', function(event) {
+    form.onsubmit = function(event) {
         event.preventDefault();
-    
-        if(pass1 == pass2)
+        const pass1 = document.getElementById("password1").value;
+    document.getElementById("password1").style.color = "red";
+    const pass2 = document.getElementById("password2").value;
+
+        if(pass1 !== pass2)
         {
-            showAlertSuccess();
-        }else{
             showAlertError();
+        }else{
+            showAlertSuccess();
         }
-    });
+    };
+
 
 })
-
